@@ -5,3 +5,37 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+agent
+agents
+.claude
+.cline
+.codebuddy
+.codex
+.commandcode
+.continue
+.crush
+.cursor
+.factory
+.gemini
+.github/skills
+.goose
+junie
+.kilocode
+.kiro
+.kode
+.mcpjam
+.mux
+.neovate
+.opencode
+.openhands
+.pi
+.pochi
+.qoder
+.qwen
+.roo
+.trae
+.vscode
+.windsurf
+.zencoder
+skills
