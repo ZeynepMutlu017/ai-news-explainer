@@ -3,5 +3,6 @@
 
 import { registerRoot } from "remotion";
 import { RemotionRoot } from "./Root";
+import './compositions/NewsVideo';
 
 registerRoot(RemotionRoot);

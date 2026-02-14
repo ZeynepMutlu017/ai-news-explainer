@@ -1,54 +1,89 @@
-# Remotion video
+# AI-Powered News Video Generator
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+An automated pipeline that fetches real-time tech news, analyzes it with Google Gemini AI, and renders a professional 70-second video using Remotion.
 
-Welcome to your Remotion project!
+## Demo
 
-## Commands
+> Every run generates a unique video based on today's top Hacker News stories.
 
-**Install Dependencies**
+**Sample Output:**
+- Top 3 tech stories fetched in real-time
+- AI-scored across 4 metrics (Relevance, Educational, Viral, Trending)
+- 70-second MP4 with smooth animations and background music
 
-```console
-npm i
+---
+
+## Features
+
+- **Real-time Data** – Fetches top stories from Hacker News API
+- **AI Analysis** – Google Gemini AI scores and analyzes each story
+- **Batch Scoring** – All stories scored in a single API call (20x efficiency)
+- **Automated Rendering** – Remotion renders a full MP4 video automatically
+- **14 Dynamic Scenes** – Intro, Story, AI Analysis, Key Topics, Why It Matters, Outro
+- **Background Music** – Fade in/out audio with royalty-free music
+
+---
+
+## Tech Stack
+
+- **Remotion** – Video rendering (TypeScript/React)
+- **Google Gemini AI** – News scoring and analysis  
+- **Hacker News API** – Real-time tech news
+- **TypeScript** – Type-safe development
+- **Node.js** – Runtime environment
+
+---
+
+## Architecture
+```
+Hacker News API
+      ↓
+  getTopStories() → Fetch 10 stories
+      ↓
+  batchScoreNews() → Single Gemini API call scores all stories
+      ↓
+  Top 3 selected by overallScore
+      ↓
+  Remotion renders 14-scene video
+      ↓
+  out/news-video.mp4
 ```
 
-**Start Preview**
+---
 
-```console
-npm run dev
-```
+## AI Scoring Metrics
 
-**Render video**
+Each story is scored on a scale of 0-10:
 
-```console
-npx remotion render
-```
+- **Relevance (30%)** – Importance for tech professionals
+- **Educational Value (25%)** – Learning potential
+- **Trending Score (25%)** – Topic timeliness
+- **Viral Potential (20%)** – Social sharing likelihood
 
-**Upgrade Remotion**
+---
 
-```console
-npx remotion upgrade
-```
+## Video Structure
 
-## Docs
+14 scenes, ~70 seconds total:
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+- **Intro (5s)** – "Today's Top 3 Tech Stories"
+- **Story Title (5s)** – Headline + Hacker News score
+- **AI Analysis (5s)** – Overall score + 4 metric bars
+- **Key Topics (5s)** – Topic tags
+- **Why It Matters (7s)** – AI reasoning
+- *(repeated × 3 for each story)*
+- **Outro (5s)** – "Stay Curious"
 
-## Help
+## Author
 
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
+**Zeynep Mutlu**
+- GitHub: [@ZeynepMutlu017](https://github.com/ZeynepMutlu017)
 
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
+---
 
 ## License
 
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+© 2026 Zeynep Mutlu. All Rights Reserved.
+
+This project is for portfolio purposes only. 
+Unauthorized use, copying, or distribution is prohibited.
